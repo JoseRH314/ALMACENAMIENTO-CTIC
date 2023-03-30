@@ -1,0 +1,107 @@
+---
+title: "Mi primera pagina web en Rmarkdown"
+author: "Abraham Zamudio"
+date: "2023-02-15"
+output: 
+  html_document:
+    df_print: paged
+    code_folding: hide
+---
+
+```{r ConfiguracionCeldasCodigo, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduccion a Rmarkdown
+La forma de estructurar un documento o de crear secciones de Latex (H1 en HTML)
+es lo que me va permitir estructurar mi documento.
+
+UN archivo de codigo *R MarkDown* (`.Rmd`), va servir para escribir nuestros
+reportes combinando codigo con text
+
+El codigo usando el lenguaje de programacion `R` se agregar por intermedio de 
+pedazos de codigo (*code chunks*)
+
+```{r ConfiguracionDirectorioTrabajo}
+# Esto es un comentario de R
+# Una de las primeras cosas que aprendimos es a configurar
+# nuestro directorio de trabajo
+setwd("C://Users/azamudio/Desktop/Programacion_R/Sesion6/")
+```
+
+Luego de conocer como definir nuestro directorio de trabajo y saber como 
+verificar (`getwd`), podemos concentrarnos en aprender a realizar 
+operaciones aritmeticas.
+
+```{r Operaciones1}
+# Usemos el operador exponenciacion
+2^8
+
+```
+
+Agreguemos un grafico usando `R` a nuestro reporte 
+
+```{r PrimerPlot,fig.align='center',fig.height=5, fig.width=5, echo=TRUE}
+# Definamos una variable independiente
+x <- 5:30
+
+# Definamos una variable dependiente
+y <- rnorm(n = length(x), mean = 3.6, sd  = 12.5)
+
+# Usemos el paquete graphics para mostrar un diagrama de dispersion
+plot(x,y,main = "Primer grafico")
+
+```
+
+# Formato del texto en mi reporte
+
+Algunas de las formas mas comunes de manipular cualquier texto son : 
+
+- *cursiva*
+- **formato en negritas**
+- __*curviva y en negritas*__
+- ~~Texto erroneo~~
+- [Univirtual](https://univirtual.uni.pe/)
+- `codigo_en_lenguaje_R <- PIT2023`
+
+
+Tambien (y al igual que en HTML y de manera similar a LaTeX) podemos tener una 
+jerarquia entre titulos, subtitulos, y demas elementos internos.
+
+# Primer Titulo (`# Primer Titulo`) :
+
+Esto es equivalente a un `\section` de LaTeX o a un `H1` de HTML.
+
+## Primer subtitulo  (`## Primer subtitulo`)
+
+### Elemento interno al primer subtitulo
+
+#### Elemento interno al anterior  : 
+
+Equivalente al H4 de HTML
+
+##### Titulo INterno H5
+
+###### Titulo interno H6
+
+
+# Codigo LaTeX
+Este lenguaje de marcado tambien soporta algo de codigo
+$\LaTeX$. Es ya sabido que $\LaTeX$ es muy bueno para agregar formular/operaciones
+con objetos matematicos tanto en una linea , como por ejemplo 
+$a^2 + b^2 = c^2$, asi como en un parrafo/linea dedicado 
+
+$$ \lim_{x \to 0} \frac{\sin(x)}{x} = 1$$
+
+
+
+
+
+
+
+
+
+
+
+
+

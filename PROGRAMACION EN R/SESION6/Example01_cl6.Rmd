@@ -1,0 +1,49 @@
+---
+title: "Segundo documento usando Rmarkdown"
+author: Abraham Zamudio
+date: "Miercoles 12 de febrero del 2023"
+output: pdf_document
+
+abstract: "En esta ultima clase del curso buscamos 
+           obtener los conocimientos basicos del uso
+           de Rmarkdown."
+           
+header-includes:
+  - \usepackage[spanish]{babel}
+  - \usepackage[]{amsmath}
+  - \usepackage[]{amssymb}
+  - \usepackage[]{graphicx}
+  - \usepackage[]{natbib}
+---
+
+# Introduccion
+
+Empezamos mencionando que las salidas de un documento de Rmarkdown
+puede ser un pdf o un html. En ambos es posible usar/incrustar
+codigo Latex.
+
+
+## Primeros pasos con markdown en R
+
+Los paquetes necesarios para ejecutar sin problema algunas reportes 
+basicos son :
+  * tinytex
+  * knitr
+  * rmarkdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

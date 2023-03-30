@@ -1,0 +1,74 @@
+---
+title: "Estudio descriptivo de un dataset"
+author: "Abraham Zamudio"
+date: "2023-02-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Cargar los datos de mi dataset 
+URL :  [AirBnB](https://raw.githubusercontent.com/robintux/Datasets4StackOverFlowQuestions/master/AirBnB_Valoraciones.csv)
+
+```{r CargaData, message=FALSE}
+library(tidyverse)
+data1 <- read.csv("https://raw.githubusercontent.com/robintux/Datasets4StackOverFlowQuestions/master/AirBnB_Valoraciones.csv")
+head(data1, 10)
+```
+
+# Preprocesamiento de la data 
+## Nombres de columnas 
+Para empezar con un estudio descriptivo basico de nuestro dataset, empezamos sabiendo
+los nombres de las variables 
+
+```{r ColumnNames}
+colnames(data1)
+
+```
+
+## Estructura del dataframe 
+Usaremos la funcion [str](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str)
+
+```{r EstructuraDF}
+str(data1)
+
+```
+
+## Variable cuantitativa : `reviews_per_month`
+Veamos un analisis univariado 
+
+### Resumen descriptivo 
+```{r EstadisticasBasicas}
+summary(data1$reviews_per_month)
+```
+
+- Boxplot 
+```{r boxplot}
+boxplot(data1$reviews_per_month,
+        main = "NUmero de Reviews por mes")
+```
+
+
+- Ejemplo usando ggplot2 : Analicemos el comportamiento entre 
+`reviews_per_month` y `price`
+```{r DiagramaDispersion, fig.height=4, fig.width= 5, fig.align='center'}
+ggplot(data = data1, mapping = aes(x = reviews_per_month,
+                                   y = price))+
+  geom_point()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

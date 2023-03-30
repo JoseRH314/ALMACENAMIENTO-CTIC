@@ -1,0 +1,47 @@
+---
+title: "Mi primera pagina web en Rmarkdown"
+author: "Abraham Zamudio"
+date: "2023-02-15"
+output: html_document
+---
+
+```{r ConfiguracionCeldasCodigo, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduccion a Rmarkdown
+La forma de estructurar un documento o de crear secciones de Latex (H1 en HTML)
+es lo que me va permitir estructurar mi documento.
+
+UN archivo de codigo *R MarkDown* (`.Rmd`), va servir para escribir nuestros
+reportes combinando codigo con text
+
+El codigo usando el lenguaje de programacion `R` se agregar por intermedio de 
+pedazos de codigo (*code chunks*)
+
+```{r ConfiguracionDirectorioTrabajo}
+# Esto es un comentario de R
+# Una de las primeras cosas que aprendimos es a configurar
+# nuestro directorio de trabajo
+setwd("C:/Users/EQUIPO/Desktop/CTIC/PROGRAMACION EN R/SESION6")
+```
+
+Luego de conocer como definir nuestro directorio de trabajo y saber como 
+verificar (`getwd`), podemos concentrarnos en aprender a realizar 
+operaciones aritmeticas.
+
+```{r Operaciones1}
+# Usemos el operador exponenciacion
+2^8
+
+```
+
+
+
+
+
+
+
+
+
+
